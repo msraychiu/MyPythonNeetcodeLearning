@@ -6,7 +6,7 @@ def threeSum(self, nums: List[int]) -> List[List[int]]:
     nums.sort()
     result = []
     for index, num in enumerate(nums):
-        if num == nums[index-1]:
+        if index > 0 and num == nums[index-1]:
             continue
         i, j = index+1, len(nums)-1
         while i < j:
