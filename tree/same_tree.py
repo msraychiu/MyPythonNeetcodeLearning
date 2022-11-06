@@ -18,7 +18,7 @@ class Solution(object):
             p_pop = p_list.pop()
             q_pop = q_list.pop()
 
-            if (p_pop and q_pop and p_pop.val != q_pop.val) or (p_pop and not q_pop) or (not p_pop and q_pop):
+            if (p_pop and q_pop and p_pop.val != q_pop.val) or (type(p_pop) != type(q_pop)):
                 return False
 
             if p_pop and q_pop:
